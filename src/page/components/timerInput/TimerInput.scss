@@ -1,0 +1,18 @@
+.timer-input {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#hours,
+#minutes,
+#seconds {
+  width: 90px;
+  line-height: 2;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 40px;
+  background: hsla(0, 0%, 30%, 0.5);
+  color: var(--text-clr);
+  padding-inline: 1rem;
+}
