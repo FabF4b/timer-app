@@ -9,4 +9,9 @@
   text-transform: uppercase;
   color: var(--text-clr);
   background: var(--bg-btn);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: hsl(0, 0%, 100%);
+  }
 }

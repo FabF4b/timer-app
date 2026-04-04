@@ -1,0 +1,31 @@
+@mixin largeScreen {
+  @media screen and (min-width: 550px) {
+    height: 780px;
+    width: 430px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: repeat(1fr);
+    font-family: var(--font-primary);
+    color: var(--text-clr);
+    background: hsla(0, 0%, 5%, 0.99);
+    border-radius: 32px;
+    border: 1px solid hsla(0, 0%, 20%, 0.25);
+  }
+}
+
+@mixin largeScreenBorder {
+  @media screen and (min-width: 550px) {
+    position: absolute;
+    content: "";
+    height: calc(780px + 0.75rem);
+    width: calc(430px + 0.75rem);
+    background: var(--gradient-border);
+    background-blend-mode: screen, hard-light;
+    border-radius: 40px;
+    animation: shift 5s infinite alternate ease-in-out;
+    animation-play-state: paused;
+    box-shadow: hsla(214, 50%, 50%, 0.75) 0px 40px 160px -72px;
+    z-index: -1;
+  }
+}

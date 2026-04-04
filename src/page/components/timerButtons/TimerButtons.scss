@@ -9,15 +9,14 @@
   &:hover {
     border: 2px solid hsl(239, 50%, 47%);
     background: transparent;
-    color: hsl(0, 0%, 100%);
   }
 }
 
 #pause {
   border: 2px solid hsl(283, 73%, 30%);
+  background: transparent;
 
   &:hover {
-    color: hsl(0, 0%, 100%);
     border: 2px solid hsl(283, 73%, 40%);
   }
 }
@@ -28,6 +27,5 @@
   &:hover {
     border: 2px solid hsl(337, 64%, 30%);
     background: transparent;
-    color: hsl(0, 0%, 100%);
   }
 }

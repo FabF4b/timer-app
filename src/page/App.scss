@@ -1,37 +1,30 @@
+@use "../styles/mixins";
+
 .app {
-  height: 780px;
-  width: 430px;
+  height: 95vh;
+  width: 90vw;
   display: grid;
   justify-items: center;
   align-items: center;
-  gap: 2rem;
-  grid-template-columns: 1fr;
   grid-template-rows: repeat(1fr);
   font-family: var(--font-primary);
   color: var(--text-clr);
   background: hsla(0, 0%, 5%, 0.99);
   border-radius: 32px;
-
-  &__active {
-    animation-play-state: running;
-  }
+  border: 1px solid hsla(0, 0%, 20%, 0.25);
+  @include mixins.largeScreen;
 
   &::after {
-    content: "";
     position: absolute;
-    height: calc(780px + 0.75rem);
-    width: calc(430px + 0.75rem);
-    z-index: -1;
-    border-radius: 40px;
+    content: "";
+    height: 100%;
+    width: 100%;
     background: var(--gradient-border);
     background-blend-mode: screen, hard-light;
-    overflow: hidden;
-    animation: shift 3s infinite alternate ease-in-out;
+    animation: shift 5s infinite alternate ease-in-out;
     animation-play-state: paused;
-    box-shadow:
-      hsla(240, 60%, 28%, 0.25) 0px 50px 100px -20px,
-      hsla(0, 0%, 70%, 0.3) 0px 30px 60px -30px,
-      hsla(210, 73%, 15%, 0.35) 0px -2px 6px 0px inset;
+    z-index: -1;
+    @include mixins.largeScreenBorder;
   }
 
   &__active::after {
